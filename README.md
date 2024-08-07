@@ -18,3 +18,7 @@ You can also make server side fetching by only using the services you created.
 
 [youtube video](https://www.youtube.com/watch?v=rwTRD-p-rog)
 
+
+![image](https://github.com/user-attachments/assets/a9b18300-99b9-4a95-bfe5-919d4fdf1d58)
+
+
