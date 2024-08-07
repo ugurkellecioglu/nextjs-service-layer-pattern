@@ -1,36 +1,20 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This repo is for demonstrating how you can implement service layer pattern in your next js apps.
 
-## Getting Started
+By using service layer pattern you can easily separate UI and your logic in your next app.
 
-First, run the development server:
+Basically, you'll have a services folder where you create your services and create a new class instance from it. i.e. `UsersService`
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Functions that are in service files responsible for making api calls and return data or error.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then, you'll have a `hooks` folder where you create corresponding hook files by looking at your services. i.e. `useUser.ts`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+in these files, you should use react-query to use your service and get data states and return needed fields. i.e. `data, status`
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+then you can use that hook any component you like. 
 
-## Learn More
+in just one line of code, you'll get the data in your component.
 
-To learn more about Next.js, take a look at the following resources:
+You can also make server side fetching by only using the services you created.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+[youtube video](https://www.youtube.com/watch?v=rwTRD-p-rog)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
